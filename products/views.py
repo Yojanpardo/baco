@@ -5,8 +5,8 @@ from .models import Product
 
 # Create your views here.
 
-def index(request):
-	product = Product.object.order_by('id')
+def home(request):
+	product = Product.objects.order_by('id')
 	template = loader.get_template('home.html')
 	context = {
 		'product':product
